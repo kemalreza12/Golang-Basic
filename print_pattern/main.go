@@ -6,11 +6,11 @@ import (
 
 func cetakGambar(num int) {
 	if num%2 == 1 {
-		count := num + 1
-		for row := 1; row < count; row++ {
+		value := num + 1
+		for i := 1; i < value; i++ {
 			str := ""
-			for col := 1; col < count; col++ {
-				if col == 1 || col == num || row == (num/2)+1 {
+			for j := 1; j < value; j++ {
+				if j == 1 || j == num || i == (num/2)+1 {
 					str += " * "
 				} else {
 					str += " = "
@@ -19,7 +19,7 @@ func cetakGambar(num int) {
 			fmt.Println(str)
 		}
 	} else {
-		fmt.Println("Parameter harus merupakan bilangan ganjil")
+		fmt.Println("Parameter harus bilangan ganjil")
 	}
 }
 
